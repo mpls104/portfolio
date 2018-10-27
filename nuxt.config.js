@@ -1,12 +1,5 @@
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/<portfolio>/'
-  }
-} : {}
-
 module.exports = {
 
-  ...routerBase,
   /*
   ** Headers of the page
   */
@@ -18,7 +11,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/portfolio/favicon.ico' },
       {
         rel: 'stylesheet',
         href: 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css'
@@ -46,6 +39,9 @@ module.exports = {
         })
       }
     }
+  },
+  router: {
+    base: '/portfolio/'
   }
 }
 
