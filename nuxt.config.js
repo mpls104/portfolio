@@ -1,5 +1,5 @@
 module.exports = {
-
+  mode: 'spa',
   /*
   ** Headers of the page
   */
@@ -18,6 +18,11 @@ module.exports = {
       }
     ]
   },
+  plugings: [
+    { src: "@/plugins/element-ui", ssr:false },
+    { src: "@/plugins/filters.js", ssr:false }
+  ],
+  css: ["element-ui/lib/theme-chalk/index.css"],
   /*
   ** Customize the progress bar color
   */
@@ -26,6 +31,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    vendoer: ["axisos", "element-ui", "dayjs"],
     /*
     ** Run ESLint on save
     */
